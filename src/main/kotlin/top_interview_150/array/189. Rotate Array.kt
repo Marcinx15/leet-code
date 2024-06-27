@@ -5,7 +5,7 @@ fun main() {
     rotate4(intArrayOf(-1, -100, 3, 99), 2)
 }
 
-fun rotate(nums: IntArray, k: Int) {
+private fun rotate(nums: IntArray, k: Int) {
     val tempArr = IntArray(nums.size)
     for (i in nums.indices) tempArr[(i + k) % nums.size] = nums[i]
     for (i in nums.indices) nums[i] = tempArr[i]
@@ -49,7 +49,7 @@ fun reverse(arr: IntArray, startIndex: Int, endIndex: Int) {
     }
 }
 
-fun swap(arr: IntArray, i: Int, j: Int) {
+private fun swap(arr: IntArray, i: Int, j: Int) {
     val temp = arr[i]
     arr[i] = arr[j]
     arr[j] = temp
