@@ -10,13 +10,15 @@ fun main() {
 fun longestConsecutive(nums: IntArray): Int {
     val numsSet = nums.toSet()
     var maxLcs = 0
+
     numsSet.forEach {
-        if ((it - 1) !in numsSet) {
+        if (it - 1 !in numsSet) {
             var length = 1
             while ((it + length) in numsSet) length++
             maxLcs = max(maxLcs, length)
         }
     }
+
     return maxLcs
 }
 
