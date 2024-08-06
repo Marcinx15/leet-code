@@ -7,13 +7,12 @@ fun main() {
 }
 
 fun isPalindrome(s: String): Boolean {
-    val toCheck = s.filter { it.isLetterOrDigit() }.toLowerCase()
-    var i = 0
-    var j = toCheck.lastIndex
-    while (i < j) {
-        if (toCheck[i] != toCheck[j]) return false
-        i++
-        j--
+    val processed = s.lowercase().filter { it.isLetterOrDigit() }
+    var (startIndex, endIndex) = Pair(0, processed.length - 1)
+    while (startIndex < endIndex) {
+        if (processed[startIndex] != processed[endIndex]) return false
+        startIndex++
+        endIndex--
     }
     return true
 }
