@@ -1,4 +1,4 @@
-package leetcode_75.arrays_and_strings
+package leetcode_75
 
 import kotlin.math.min
 

@@ -1,6 +1,4 @@
-package leetcode_75.arrays_and_strings
-
-import kotlin.math.sqrt
+package leetcode_75
 
 fun main() {
     val solution = Solution1071()
