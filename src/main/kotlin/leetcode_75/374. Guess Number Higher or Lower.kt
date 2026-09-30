@@ -1,5 +1,7 @@
 package leetcode_75
 
+import java.util.PriorityQueue
+
 fun main() {
     val solution = Solution123()
     solution.pick = 1
@@ -42,4 +44,6 @@ class Solution123 : GuessGame() {
         }
         return g(1, n)
     }
+
+    val queu = PriorityQueue<Int>()
 }
